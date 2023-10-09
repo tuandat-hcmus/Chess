@@ -1,0 +1,127 @@
+* {
+    font-family: 'consolas'
+}
+.container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    position: relative;
+}
+
+h1 {
+    margin: 0;
+}
+
+hr {
+    width: 50%;
+    border: 1px rgba(0, 0, 0, 0.5) solid;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.score-board {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    z-index: -1;
+    background-color: white;
+    opacity: 0.6;
+}
+
+.score-board button {
+    padding: 0.5rem;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 2px grey;
+    transition: 350ms;
+    font-weight: 600;
+}
+
+.score-board button:hover {
+    background-color: darkgray;
+    color: #fff;
+}
+
+#chess-board {
+    width: 540px;
+    height: 540px;
+    border: 1rem #231B1F solid;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    box-shadow: 2px 5px 2px grey;
+}
+
+.cell {
+    box-sizing: border-box;
+    color:#542F2D;
+    position: relative;
+}
+
+.black-cell {
+    background-color: #A07461;
+}
+
+.white-cell {
+    background-color: #C5B1AA;
+}
+
+.piece {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;;
+    background-color: transparent;
+    font-size: 3rem;
+    z-index: 10;
+}
+
+[draggable=true] {
+    cursor: grab;
+}
+
+[draggable=false] {
+    cursor: not-allowed;
+}
+
+.thumb {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.info {
+    background-color: antiquewhite;
+    border:1px brown solid;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.info > div {
+    width: 16px;
+    height: 16px;
+    border: 2px red solid;
+    background-color: white;
+}
+
+.moveable {
+    background-color: greenyellow;
+    border: 2px rgb(65, 237, 65) solid;
+}
+
+.attackable {
+    background-color: rgb(245, 116, 116);
+    border: 2px red solid;
+}
