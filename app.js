@@ -390,10 +390,12 @@ function checkWin() {
     if(document.getElementById('king') === null) {
         winner.innerText = 'White';
         scoreBoard.style.zIndex = 100;
+        scoreBoard.style.opacity = 1;
     }
     if(document.getElementById('King') === null) {
         winner.innerText = 'Black';
         scoreBoard.style.zIndex = 100;
+        scoreBoard.style.opacity = 1;
     }
 }
 
